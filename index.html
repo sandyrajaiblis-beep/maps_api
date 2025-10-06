@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplikasi Peta</title>
+    
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    
+    <!-- Font Awesome untuk ikon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="app-container">
+        <div class="header">
+            <h1>Aplikasi Peta</h1>
+        </div>
+        
+        <div class="search-container">
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Cari lokasi..." value="jakarta">
+                <button id="searchButton"><i class="fas fa-search"></i></button>
+            </div>
+        </div>
+        
+        <div class="location-info">
+            <h2 id="locationName">Jakarta</h2>
+        </div>
+        
+        <div class="map-container">
+            <div id="map"></div>
+        </div>
+        
+        <div class="info-cards">
+            <div class="info-card">
+                <div class="info-icon">
+                    <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <div class="info-details">
+                    <h3>Koordinat</h3>
+                    <p id="coordinates">-6.2088, 106.8456</p>
+                </div>
+            </div>
+            
+            <div class="info-card">
+                <div class="info-icon">
+                    <i class="fas fa-compass"></i>
+                </div>
+                <div class="info-details">
+                    <h3>Alamat</h3>
+                    <p id="address">Jakarta, Indonesia</p>
+                </div>
+            </div>
+            
+            <div class="info-card">
+                <div class="info-icon">
+                    <i class="fas fa-globe"></i>
+                </div>
+                <div class="info-details">
+                    <h3>Zoom Level</h3>
+                    <p id="zoomLevel">11</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="controls">
+            <button id="addMarkerButton" class="control-btn">
+                <i class="fas fa-map-pin"></i> Tambah Marker
+            </button>
+            <button id="clearMarkersButton" class="control-btn">
+                <i class="fas fa-trash-alt"></i> Hapus Marker
+            </button>
+            <button id="currentLocationButton" class="control-btn">
+                <i class="fas fa-location-arrow"></i> Lokasi Saya
+            </button>
+        </div>
+    </div>
+
+    <!-- Leaflet JavaScript -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
